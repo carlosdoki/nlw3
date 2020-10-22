@@ -1,0 +1,33 @@
+### Listar Orfanatos
+GET http://localhost:3333/orphanages
+
+### Detalhe Orfanato
+GET http://localhost:3333/orphanages/1
+
+### Criar Orfanato
+POST http://localhost:3333/orphanages
+content-type: application/json
+
+{
+    "name": "Lar das meninas",
+    "latitude": -23.4932072, 
+    "longitude": -46.8349725,
+    "about": "Sobre o orfanato",
+    "instructions": "Venha visitar",
+    "opening_hours": "Das 8h até 18h",
+    "open_on_weekends": true
+}
+
+### Criar Orfanato com Upload
+POST http://localhost:3333/orphanages
+Content-Type: multipart/form-data;
+
+{
+    "name": "Lar das meninas",
+    "latitude": -23.4932072, 
+    "longitude": -46.8349725,
+    "about": "Sobre o orfanato",
+    "instructions": "Venha visitar",
+    "opening_hours": "Das 8h até 18h",
+    "open_on_weekends": true
+}
